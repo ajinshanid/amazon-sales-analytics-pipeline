@@ -47,76 +47,78 @@ SELECT
     TOTAL_PROFIT
 FROM STAGING_AMAZON_SALES;
 ```
-## Data Report and Insights
 
-This section summarizes the findings derived from the Power BI dashboard connected to the Snowflake data warehouse.  
-The analysis focuses on overall profitability, regional performance, carrier efficiency, and product trends.
-
----
+## Data Insights and Analysis
 
 ### Revenue and Profit Overview
-- Total revenue reached **$48.17M**, with total profit of **$23.67M** and total cost of **$24.50M**.  
-- Approximately **139K units** were sold across all product categories.  
-- The business maintained an average **profit margin of 49%**, reflecting efficient pricing and cost management.  
-- Sales and profitability trends indicate strong operational efficiency and financial performance across regions.
+- **Total Revenue:** $48.17M  
+- **Total Profit:** $23.67M  
+- **Total Cost:** $24.50M  
+- **Units Sold:** 139K  
+- Indicates strong cost efficiency and consistent revenue generation across regions.  
+- Sales performance remains steady with clear profitability trends.
 
 ---
 
 ### Regional Performance
-- **Toronto, Brampton, and Vancouver** recorded the highest total revenue.  
-- **Moncton and Sudbury** showed lower sales, suggesting regional demand gaps.  
-- Revenue is heavily concentrated in urban markets, where marketing and logistics operations are most effective.  
-- Expanding marketing campaigns and logistics infrastructure in mid-tier cities can help balance performance and tap new customer bases.
+- **Toronto**, **Brampton**, and **Vancouver** generated the highest revenue.  
+- **Moncton** and **Sudbury** recorded lower sales volumes.  
+- Most revenue comes from large metropolitan areas where logistics are strongest.  
+- Expanding digital marketing to mid-tier cities could drive additional growth opportunities.
 
 ---
 
 ### Shipment Carrier Efficiency
-- **Intelcom** handled about 44% of all shipments, making it the most utilized and efficient carrier.  
-- **Purolator** and **AMZL** each handled roughly 7% of total shipments.  
-- **UPS, Canada Post, and FedEx** collectively managed the remaining 28%.  
-- Intelcom’s dominance demonstrates operational strength but also creates a single-carrier dependency risk.  
-- Increasing partnerships with secondary carriers can improve delivery flexibility and reduce potential disruptions.
+- **Intelcom** handled around 44% of total shipments, making it the top-performing carrier.  
+- **Purolator** and **AMZL** managed approximately 7% each, while **UPS**, **Canada Post**, and **FedEx** covered the remaining 28%.  
+- Intelcom’s dominance highlights strong operational efficiency but also dependence on a single carrier.  
+- Broadening carrier partnerships would increase flexibility and reduce delivery risks.
 
 ---
 
 ### Product Category Analysis
-- **High-profit categories** include Electronics, Home & Kitchen, and Grocery.  
-- **Lower-margin categories** such as Books and Pet Supplies maintained steady sales but contributed less to overall profitability.  
-- High-value categories performed best in major cities with higher income levels.  
-- Prioritizing promotions for high-margin categories and bundling slower-moving items can improve total profitability.
+- **High-performing categories:** Electronics, Home & Kitchen, and Grocery.  
+- Categories with higher **average unit prices** showed stronger revenue contribution.  
+- Focusing on high-value items and optimizing pricing strategies can enhance overall returns.  
+- The Power BI scatter plot confirmed a positive trend between unit price and total profit by category.
 
 ---
 
 ### Monthly Performance Trends
-- Profit peaked in **July**, indicating a strong mid-year sales period.  
-- A slight decline in **August and September** suggests seasonal variation or post-promotional slowdown.  
-- The data highlights a clear mid-year sales spike associated with promotional or holiday activity.  
-- These patterns can be used for **sales forecasting**, **inventory optimization**, and **marketing planning** during high-demand months.
+- Profit peaked in **July**, followed by a slight decline in **August–September**.  
+- Mid-year spikes align with potential promotional or seasonal activity.  
+- These insights can guide inventory planning and marketing timing for future campaigns.
 
 ---
 
-### Overall Business Insight
-- Urban regions are the primary revenue drivers, supported by efficient logistics and strong product demand.  
-- High-margin categories contribute most significantly to profitability.  
-- Intelcom’s strong delivery performance supports sales but introduces dependency risk.  
-- Strategic actions such as diversifying carrier networks, strengthening marketing in smaller regions, and focusing on profitable products could increase overall profit margins by an estimated **10–15%** in the next sales cycle.
+### Overall Business Insights
+- Urban regions drive the majority of sales and profitability.  
+- High-value product categories remain the main revenue contributors.  
+- Intelcom ensures fast and efficient logistics but creates dependency.  
+- Expanding regional reach and carrier diversity could improve long-term stability and performance.
 
 ---
 
+## Key Power BI Metrics
+- **Average Unit Price:**  
+  `AVERAGE(FACT_SALES[UNIT_PRICE])`
+- **Average Unit Cost:**  
+  `AVERAGE(FACT_SALES[UNIT_COST])`
 
-### Key Metrics Implemented in Power BI
-Average Unit Price = AVERAGE(FACT_SALES[UNIT_PRICE])  
-Average Unit Cost = AVERAGE(FACT_SALES[UNIT_COST])  
-Profit Margin = (Average Unit Price - Average Unit Cost) / Average Unit Price  
-These dynamic DAX-based measures allow accurate tracking of price efficiency, profitability, and regional performance.
+These DAX measures provide insight into pricing efficiency and cost control, directly connected to the Snowflake fact table for live data analysis.
 
-### Visualization Summary
-The Power BI dashboard includes:
-- Revenue by City chart to compare regional performance.
-- Units Sold by Carrier chart to assess shipping efficiency.
-- Monthly Profit Trend line chart to show seasonal variation.
-- Profit vs. Unit Cost scatter plot to highlight cost-performance relationships.
+---
+
+## Dashboard Summary
+The Power BI dashboard visualizes:
+- **Revenue by City** – Regional performance comparison.  
+- **Units Sold by Carrier** – Shipment distribution across partners.  
+- **Monthly Profit Trend** – Seasonality and performance shifts.  
+- **Profit vs. Unit Cost (Scatter)** – Relationship between pricing and cost at the category level.  
+
+All visuals are dynamically connected to Snowflake for real-time analytics and consistent data updates.
+
+---
 
 ## Conclusion
-This project demonstrates how a fully integrated data pipeline using Python, Snowflake, and Power BI can convert raw sales data into actionable insights. By cleaning and transforming data in Python, modeling it through a Snowflake star schema for scalability, and visualizing real-time metrics in Power BI with DAX-based measures, the workflow delivers a complete view of sales performance, profitability, and logistics efficiency. This end-to-end approach highlights the ability to design modern, cloud-based analytics solutions.
-
+This project demonstrates an end-to-end analytics workflow built with **Python**, **Snowflake**, and **Power BI**. From cleaning and preparing raw data to designing a Snowflake star schema and building interactive Power BI visuals, the process provides a clear, data-driven understanding of sales, costs, and logistics efficiency.  It showcases the ability to structure, model, and visualize data effectively to support business insights and decision-making.
