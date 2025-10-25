@@ -30,8 +30,6 @@ This project demonstrates a complete **data pipeline and analytics workflow** fo
   - **FACT_SALES** – Core metrics such as Units Sold, Unit Price, Revenue, Cost, and Profit.  
 - Used **MD5 hashing** to generate consistent surrogate keys for dimension joins.
 
-`- Used MD5 hashing to generate consistent surrogate keys for dimension joins.
-
 ```sql
 CREATE OR REPLACE TABLE FACT_SALES AS
 SELECT
