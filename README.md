@@ -119,8 +119,6 @@ The Power BI dashboard includes:
 - Monthly Profit Trend line chart to show seasonal variation.
 - Profit vs. Unit Cost scatter plot to highlight cost-performance relationships.
 
-Each visual connects directly to Snowflake data for live querying and real-time updates, ensuring that metrics always reflect the latest data.
-
-### Conclusion
+## Conclusion
 This project demonstrates how a fully integrated data pipeline using Python, Snowflake, and Power BI can convert raw sales data into actionable insights. By cleaning and transforming data in Python, modeling it through a Snowflake star schema for scalability, and visualizing real-time metrics in Power BI with DAX-based measures, the workflow delivers a complete view of sales performance, profitability, and logistics efficiency. This end-to-end approach highlights the ability to design modern, cloud-based analytics solutions.
 
